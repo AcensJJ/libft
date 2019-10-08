@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_memchr.c                                      .::    .:/ .      .::   */
+/*   ft_memccpy.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/08 14:55:07 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/08 15:16:20 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/08 13:45:12 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/08 14:29:25 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t	i;
-	char	*ptr;
+	unsigned int	i;
+	char			*dest;
+	char			*ptr;
 
-	ptr = (unsigned char) s;
+	dest = (char *) dst;
+	ptr = (char *) src;
 	i = 0;
 	while (i != n)
 	{
+		dest[i] = ptr[i];
 		if (ptr[i] == (unsigned char) c)
-			return (ptr[i]);
+			return (dest[++i]);
 		i++;
 	}
-	return (NULL);
+	return (dst);
 }

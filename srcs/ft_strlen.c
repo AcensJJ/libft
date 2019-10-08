@@ -6,14 +6,16 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 14:52:52 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/07 14:58:31 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/08 10:52:49 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include <string.h>
+
+size_t		ft_strlen(char *str)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (str[i] != '\0')
