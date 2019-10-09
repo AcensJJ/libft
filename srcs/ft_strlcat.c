@@ -6,15 +6,17 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 15:00:38 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/07 15:04:27 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/09 11:39:42 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-unsigned	int		ft_strlcat(char *dest, char *src, unsigned int size)
+#include <string.h>
+
+size_t		ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int i;
-	unsigned int j;
+	size_t i;
+	size_t j;
 
 	i = 0;
 	j = 0;

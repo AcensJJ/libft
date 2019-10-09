@@ -6,15 +6,19 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 15:14:44 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/07 15:18:25 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/09 11:37:11 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-unsigned	int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int i;
+#include <string.h>
 
+unsigned	int	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	i;
+	char	*ptr;
+
+	ptr = (char *)src;
 	i = 0;
 	if (size > 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 11:01:14 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/08 11:10:50 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/09 11:00:34 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	unsigned int	i;
 	char			*ptr;
 
-	ptr = (char *) s;
+	ptr = (char	*)s;
 	i = 0;
 	while (i != n && ptr[i])
 	{

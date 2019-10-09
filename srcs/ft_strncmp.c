@@ -6,15 +6,17 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 15:19:31 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/07 15:19:34 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/09 11:36:11 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+#include <string.h>
+
+int		ft_strncmp(char *s1, char *s2, size_t n)
 {
-	unsigned int i;
-	unsigned int c;
+	size_t i;
+	size_t c;
 
 	i = 0;
 	while (s1[i] != '\0' && s1[i] == s2[i] && i < n - 1)
