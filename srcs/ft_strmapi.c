@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_memchr.c                                      .::    .:/ .      .::   */
+/*   ft_strmapi.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/08 14:55:07 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 17:15:14 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/10 17:13:45 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/10 17:48:52 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "ft_lib.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	char	*ptr;
+	char			*ptr;
+	unsigned int	i;
 
-	ptr = (unsigned char *)s;
 	i = 0;
-	while (i != n)
-	{
-		if (ptr[i] == (unsigned char)c)
-			return (&ptr[i]);
-		i++;
-	}
-	return (NULL);
+	if (!(ptr = malloc(ft_strlen(s) + 1)))
+		return (NULL);
+	*ptr = 0;
+	i = 0;
+	while (s[i])
+		ptr[i++] = f(i, s[i]);
+	ptr[++i] = 0;
 }

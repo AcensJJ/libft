@@ -1,58 +1,69 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strtrim.c                                     .::    .:/ .      .::   */
+/*   ft_itoa.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/10 14:00:05 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 16:28:59 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/10 16:16:12 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/10 16:42:20 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "ft_lib.h"
 
-int		ft_count_trim(char const *s1, char const *set)
+void	ft_config_ptr(long long nb, long long i, long long j, char *ptr)
 {
-	unsigned int	count;
-	long long		i;
-	long long		j;
-	long long		k;
-
-	i = -1;
-	count = 0;
-	while (s1[++i])
+	long long		reste;
+	
+	if (nb < 0)
 	{
-		j = 0;
-		while (set[j] && set[j] != s1[i])
-			j++;
-		if (s1[i] != set[j])
-			count++;
+		nb *= -1;
+		ptr[++j] = '-';
+	}
+	while (nb >= i)
+		i *= 10;
+	while (i >= 10)
+	{
+		i /= 10;
+		reste = nb % i;
+		ptr[++j] = ((nb - reste) / i) + 48;
+		nb = reste;
+	}
+	ptr[++j] = 0;
+}
+
+int		ft_count_itoa(long long n)
+{
+	long long	i;
+	long long	count;
+
+	count = 1;
+	i = 10;
+	if (n < 0)
+		n *= -1;
+	while (n >= i)
+	{
+		i *= 10;
+		count++;
 	}
 	return (count);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_itoa(int n)
 {
+	char			*ptr;
+	long long		nb;
 	long long		i;
 	long long		j;
-	long long		k;
-	char			*ptr;
 
-	if (!(ptr = malloc(ft_count_trim(s1, set) + 1)))
+	nb = n;
+	j = -1;
+	if (!(ptr = malloc(ft_count_itoa(nb) + 1)))
 		return (NULL);
 	*ptr = 0;
-	i = -1;
-	k = -1;
-	while (s1[++i])
-	{
-		j = 0;
-		while (set[j] && set[j] != s1[i])
-			j++;
-		if (s1[i] != set[j])
-			ptr[++k] = s1[i];
-	}
-	ptr[++k] = 0;
+	i = 10;
+	ft_config_ptr(nb, i, j, ptr);
 	return (ptr);
 }
