@@ -6,14 +6,14 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 14:52:52 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/08 10:52:49 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/10 13:44:00 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "ft_lib.h"
 
-size_t		ft_strlen(char *str)
+size_t		ft_strlen(const char *str)
 {
 	size_t i;
 

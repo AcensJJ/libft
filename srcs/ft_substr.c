@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_tolower.c                                     .::    .:/ .      .::   */
+/*   ft_substr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/09 10:00:46 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 13:36:00 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/10 10:59:20 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/10 14:15:09 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "ft_lib.h"
 
-int		ft_tolower(int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (c > 64 && c < 91)
-		c += 32;
-	return (c);
+	unsigned int	i;
+	char			*ptr;
+
+	if (!(ptr = malloc(len + 1)))
+		return (NULL);
+	*ptr = 0;
+	while (i != len)
+		ptr[i++] = s[start++];
+	ptr[i] = '\0';
+	return (ptr);
 }

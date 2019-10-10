@@ -5,13 +5,13 @@
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/08 11:01:14 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/09 11:00:34 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/10 14:03:58 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/10 14:04:01 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <strings.h>
+#include "ft_lib.h"
 
 void	ft_bzero(void *s, size_t n)
 {

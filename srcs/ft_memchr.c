@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 14:55:07 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/09 11:48:32 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/10 13:31:40 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "ft_lib.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

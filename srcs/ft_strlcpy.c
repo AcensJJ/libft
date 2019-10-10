@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 15:14:44 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/09 11:37:11 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/10 13:34:31 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "ft_lib.h"
 
 unsigned	int	ft_strlcpy(char *dest, const char *src, size_t size)
 {

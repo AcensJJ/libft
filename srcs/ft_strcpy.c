@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_tolower.c                                     .::    .:/ .      .::   */
+/*   ft_strcpy.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/09 10:00:46 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 13:36:00 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/10 13:32:51 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/10 13:32:58 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "ft_lib.h"
 
-int		ft_tolower(int c)
+char	*ft_strcpy(char *dest, const char *src)
 {
-	if (c > 64 && c < 91)
-		c += 32;
-	return (c);
+	size_t		i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = 0;
+	return (dest);
 }

@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 16:29:57 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/09 11:01:11 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/10 13:31:35 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "ft_lib.h"
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,11 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 13:45:12 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/09 11:48:36 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/10 13:28:35 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
+#include "ft_lib.h"
 #include <string.h>
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
@@ -29,5 +30,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 			return (&dest[++i]);
 		i++;
 	}
-	return (dst);
+	return (dest);
 }

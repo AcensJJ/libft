@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 15:19:31 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/09 11:36:11 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/10 13:34:29 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "ft_lib.h"
 
 int		ft_strncmp(char *s1, char *s2, size_t n)
 {
