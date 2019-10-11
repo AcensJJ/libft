@@ -6,14 +6,14 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 16:16:12 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 16:42:20 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/11 15:37:42 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "ft_lib.h"
+#include "libft.h"
 
-void	ft_config_ptr(long long nb, long long i, long long j, char *ptr)
+static void		ft_config_ptr(long long nb, long long i, long long j, char *ptr)
 {
 	long long		reste;
 	
@@ -34,7 +34,7 @@ void	ft_config_ptr(long long nb, long long i, long long j, char *ptr)
 	ptr[++j] = 0;
 }
 
-int		ft_count_itoa(long long n)
+static int		ft_count_itoa(long long n)
 {
 	long long	i;
 	long long	count;
@@ -51,7 +51,7 @@ int		ft_count_itoa(long long n)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char			*ptr;
 	long long		nb;

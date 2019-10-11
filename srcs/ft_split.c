@@ -6,14 +6,14 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 15:35:09 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 15:44:56 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/11 15:37:42 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "ft_lib.h"
+#include "libft.h"
 
-int			ft_is_charset(char *str, char *charset)
+static int		ft_is_charset(char *str, char *charset)
 {
 	int i;
 
@@ -24,7 +24,7 @@ int			ft_is_charset(char *str, char *charset)
 	return (0);
 }
 
-int			ft_to_malloc(char const *str, char *charset)
+static int		ft_to_malloc(char const *str, char *charset)
 {
 	int		i;
 	int		n;
@@ -45,7 +45,7 @@ int			ft_to_malloc(char const *str, char *charset)
 	return (n);
 }
 
-char		*ft_copy_w(char const *str, int n, int *sign, char *dest)
+static char		*ft_copy_w(char const *str, int n, int *sign, char *dest)
 {
 	int		i;
 
@@ -59,7 +59,7 @@ char		*ft_copy_w(char const *str, int n, int *sign, char *dest)
 	return (dest);
 }
 
-void		ft_do(char const *str, char *charset, char **split, int *sign)
+static void		ft_do(char const *str, char *charset, char **split, int *sign)
 {
 	int		i;
 	int		j;
@@ -87,7 +87,7 @@ void		ft_do(char const *str, char *charset, char **split, int *sign)
 	}
 }
 
-char		**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**split;
 	char	*charset;

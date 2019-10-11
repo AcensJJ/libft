@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 14:28:22 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 13:31:33 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/11 16:48:14 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "ft_lib.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -25,9 +25,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	d[len] = 0;
 	if (d < s)
 		while (i != len)
+		{
 			d[i] = s[i++];
+			i++;
+		}
 	else
 		while (len)
-			d[len - 1] = s[len-- - 1];
+		{
+			d[len - 1] = s[len - 1];
+			len--;
+		}
 	return (d);
 }

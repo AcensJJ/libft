@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 17:17:59 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 13:35:57 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/11 15:37:42 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "ft_lib.h"
+#include "libft.h"
 
 int		ft_isalnum(int c)
 {

@@ -1,11 +1,11 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_isdigit.c                                     .::    .:/ .      .::   */
+/*   ft_putnbr_fd.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/08 09:50:05 by jacens       #+#   ##    ##    #+#       */
+/*   Created: 2019/10/11 11:34:12 by jacens       #+#   ##    ##    #+#       */
 /*   Updated: 2019/10/11 15:37:42 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
@@ -13,9 +13,36 @@
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+static void		ft_print(char vtp, int fd)
 {
-	if ((c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	if (vtp != 0)
+		write(fd, &vtp, 1);
+	else
+		write(fd, "0", 1);
+}
+
+void			ft_putnbr_fd(int n, int fd)
+{
+	long long	nb;
+	long long	i;
+	long long	reste;
+	char		vtp;
+
+	nb = n;
+	i = 10;
+	if (nb < 0)
+	{
+		nb *= -1;
+		write(1, "-", 1);
+	}
+	while (nb >= i)
+		i *= 10;
+	while (i >= 10)
+	{
+		i /= 10;
+		reste = nb % i;
+		vtp = ((nb - reste) / i) + 48;
+		ft_print(vtp, fd);
+		nb = reste;
+	}
 }

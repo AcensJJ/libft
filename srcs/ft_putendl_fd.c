@@ -1,11 +1,11 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_isdigit.c                                     .::    .:/ .      .::   */
+/*   ft_putendl_fd.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/08 09:50:05 by jacens       #+#   ##    ##    #+#       */
+/*   Created: 2019/10/11 11:43:45 by jacens       #+#   ##    ##    #+#       */
 /*   Updated: 2019/10/11 15:37:42 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
@@ -13,9 +13,12 @@
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if ((c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	int i;
+
+	i = -1;
+	while (s[++i])
+		ft_putchar_fd(s[i], fd);
+	ft_putchar_fd('\n', fd);
 }

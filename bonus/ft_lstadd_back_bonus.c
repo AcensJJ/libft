@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_isdigit.c                                     .::    .:/ .      .::   */
+/*   ft_lstadd_back_bonus.c                           .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/08 09:50:05 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/11 15:37:42 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/11 16:26:52 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/11 17:22:48 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	if ((c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	t_list *beg_lst;
+
+	beg_lst = *alst;
+	while(beg_lst->next != NULL)
+		beg_lst = beg_lst->next;
+	beg_lst->next = new;
+	new->next = NULL;
 }

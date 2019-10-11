@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 17:13:45 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 17:48:52 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/11 16:50:44 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "ft_lib.h"
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -24,6 +24,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	*ptr = 0;
 	i = 0;
 	while (s[i])
-		ptr[i++] = f(i, s[i]);
+	{
+		ptr[i] = f(i, s[i]);
+		i++;
+	}
 	ptr[++i] = 0;
 }

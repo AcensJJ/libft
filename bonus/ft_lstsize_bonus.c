@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_isdigit.c                                     .::    .:/ .      .::   */
+/*   ft_lstsize_bonus.c                               .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/08 09:50:05 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/11 15:37:42 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/11 16:18:35 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/11 16:21:55 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+int		ft_lstsize(t_list *lst)
 {
-	if ((c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	int	size;
+
+	size = 0;
+	while (lst != NULL)
+	{
+		++size;
+		lst = lst->next;
+	}
+	return (size);
 }

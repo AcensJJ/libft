@@ -6,14 +6,14 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:00:05 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/10 16:28:59 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/11 15:37:42 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "ft_lib.h"
+#include "libft.h"
 
-int		ft_count_trim(char const *s1, char const *set)
+static int	ft_count_trim(char const *s1, char const *set)
 {
 	unsigned int	count;
 	long long		i;
