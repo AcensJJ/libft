@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstnew_bonus.c                                .::    .:/ .      .::   */
+/*   ft_lstclear_bonus.c                              .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/11 12:57:00 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 18:17:41 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/13 18:11:50 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/13 18:20:26 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstnew(void *content)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*list;
+	t_list *beg_lst;
 
-	if (!(list = malloc(sizeof(t_list))))
-		return (0);
-	(*list).content = content;
-	list->next = NULL;
-	return (list);
+	beg_lst = *lst;
+	while(beg_lst->next != NULL)
+	{
+		(*del)(beg_lst->content);
+		free(beg_lst->content);
+		lst = beg_lst->next;
+	}
 }
