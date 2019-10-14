@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:00:05 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/11 15:37:42 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 14:59:11 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,7 +18,6 @@ static int	ft_count_trim(char const *s1, char const *set)
 	unsigned int	count;
 	long long		i;
 	long long		j;
-	long long		k;
 
 	i = -1;
 	count = 0;
@@ -33,7 +32,7 @@ static int	ft_count_trim(char const *s1, char const *set)
 	return (count);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	long long		i;
 	long long		j;

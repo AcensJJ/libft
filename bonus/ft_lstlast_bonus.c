@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 15:00:19 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 18:17:36 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 11:57:23 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,10 @@
 
 t_list		*ft_lstlast(t_list *lst)
 {
-	while(lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	t_list	*beg_lst;
+
+	beg_lst = lst;
+	while (beg_lst->next != NULL)
+		beg_lst = beg_lst->next;
+	return (beg_lst);
 }

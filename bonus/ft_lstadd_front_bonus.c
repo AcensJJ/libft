@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 13:49:38 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 17:42:21 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 11:54:14 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,4 +18,3 @@ void	ft_lstadd_front(t_list **alst, t_list *new)
 	new->next = *alst;
 	*alst = new;
 }
- 

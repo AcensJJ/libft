@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 10:59:20 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/11 16:54:32 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 14:59:35 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,6 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 	char			*ptr;
 
+	i = 0;
 	if (!(ptr = malloc(len + 1)))
 		return (NULL);
 	*ptr = 0;

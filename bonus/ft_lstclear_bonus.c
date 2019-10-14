@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 18:11:50 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/13 18:20:26 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 14:59:55 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,10 +18,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list *beg_lst;
 
 	beg_lst = *lst;
-	while(beg_lst->next != NULL)
+	while (beg_lst->next != NULL)
 	{
-		(*del)(beg_lst->content);
+		del(beg_lst->content);
 		free(beg_lst->content);
-		lst = beg_lst->next;
+		lst = &beg_lst->next;
 	}
 }

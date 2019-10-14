@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strrchr.c                                     .::    .:/ .      .::   */
+/*   ft_lstmap_bonus.c                                .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/09 11:32:56 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/14 14:58:49 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/14 11:50:24 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/14 13:25:34 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(void *))
 {
-	int		i;
-	char	*ptr;
+	t_list	*beg_lst;
+	t_list	*n_beg_lst;
+	t_list	*n_lst;
 
-	ptr = (char *)s;
-	i = 0;
-	while (ptr[++i] != '\0')
-		i++;
-	while (--i > 0)
-		if (ptr[i] == (char)c)
-			return (&ptr[i]);
-	return (NULL);
+	beg_lst = lst;
+	if (!(n_beg_lst = malloc(ft_lstsize(lst))))
+		return (0);
+	n_lst = n_beg_lst;
+	while (beg_lst != NULL)
+	{
+		n_beg_lst = f(beg_lst->content);
+		n_beg_lst = beg_lst->next;
+		beg_lst = beg_lst->next;
+	}
+	return (n_beg_lst);
 }

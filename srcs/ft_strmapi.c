@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 17:13:45 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/11 16:50:44 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 14:57:16 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -29,4 +29,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	ptr[++i] = 0;
+	return (ptr);
 }
