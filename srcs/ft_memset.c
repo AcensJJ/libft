@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 11:14:46 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/14 14:43:17 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/14 16:09:50 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,10 +15,10 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned int	i;
-	unsigned char	*ptr;
+	size_t	i;
+	char	*ptr;
 
-	ptr = (unsigned char *)b;
+	ptr = (char *)b;
 	i = 0;
 	while (i != len)
 	{
