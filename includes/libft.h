@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:05:15 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/14 16:12:20 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/15 17:14:43 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -49,6 +49,7 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strdup(const char *src);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strstr(const char *haystack, const char *to_find);
 char				*ft_strnstr(const char *haystack, const char *needle,\
 					size_t len);
 char				*ft_strrchr(const char *s, int c);

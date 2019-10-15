@@ -37,6 +37,7 @@ SRCS = srcs/ft_atoi.c\
 		srcs/ft_substr.c\
 		srcs/ft_tolower.c\
 		srcs/ft_toupper.c\
+		srcs/ft_strstr.c
 
 BNS = bonus/ft_lstadd_back_bonus.c\
 		bonus/ft_lstadd_front_bonus.c\

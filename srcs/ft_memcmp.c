@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 16:29:57 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/14 14:42:33 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/15 14:29:30 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,17 +15,18 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	int		c;
-	char	*vs1;
-	char	*vs2;
+	size_t		i;
+	const char	*vs1;
+	const char	*vs2;
 
 	i = 0;
-	c = 0;
-	vs1 = (char *)s1;
-	vs2 = (char *)s2;
-	while (i != n && vs1[i] == vs2[i])
+	vs1 = (const char *)s1;
+	vs2 = (const char *)s2;
+	while (i != n)
+	{
+		if ((unsigned char)vs1[i] != (unsigned char)vs2[i])
+			return ((unsigned char)vs1[i] - (unsigned char)vs2[i]);
 		i++;
-	c = vs1[i] - vs2[i];
-	return (c);
+	}
+	return (0);
 }
