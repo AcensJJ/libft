@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 13:14:56 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/11 16:49:49 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/15 18:22:14 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -32,7 +32,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s2[j])
 	{
 		ptr[i + j] = s2[j];
-		i++;
+		j++;
 	}
 	ptr[i + j] = 0;
 	return (ptr);
