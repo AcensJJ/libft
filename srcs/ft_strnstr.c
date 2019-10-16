@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 11:40:10 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/15 17:18:21 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/16 15:00:13 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,28 +16,20 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	size_t	j;
 	char	*h;
 
 	h = (char *)haystack;
 	i = 0;
-	if (needle[0] != '\0')
+	if (needle[0] == '\0')
+		return (h);
+	while (h[i])
 	{
-		if (len == ft_strlen(needle) && len == ft_strlen(haystack))
-			return (h);
-		while (haystack[i] != '\0' && i < len - 1)
+		if (h[i] == needle[0] && ft_strlen(needle) + i - 1 < len)
 		{
-			j = 0;
-			while (haystack[i + j] == needle[j] && needle[j] != '\0' &&
-			j < len - 1)
-			{
-				if ((needle[j + 1] == '\0' && haystack[i + j] == needle[j]))
-					return (&h[i]);
-				j++;
-			}
-			i++;
+			if (ft_strncmp((h + i), needle, ft_strlen(needle)) == 0)
+				return (h + i);
 		}
-		return (0);
+		i++;
 	}
-	return (h);
+	return (NULL);
 }

@@ -6,31 +6,38 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 15:00:38 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/11 15:37:42 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/16 17:24:19 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
+	char	*p_src;
 
-	i = 0;
 	j = 0;
-	while (dest[j])
-		j++;
-	while (src[i] && i + j < size - 1 && size != 0)
+	i = 0;
+	p_src = (char *)src;
+	while (i < size)
 	{
-		dest[i + j] = src[i];
-		i++;
+		if (dst[i] == 0)
+			break ;
+		if (i == size - 1 && dst[i])
+			return (size + ft_strlen(src));
+		++i;
 	}
-	dest[i + j] = '\0';
-	while (src[i])
-		i++;
-	if (j > size)
-		return (size + i);
-	return (i + j);
+	i = ft_strlen(dst);
+	while (i + j < size - 1 && p_src[j] && 0 < size)
+	{
+		dst[i + j] = p_src[j];
+		++j;
+	}
+	dst[i + j] = 0;
+	if (size < i)
+		return (size + ft_strlen(src));
+	return (i + ft_strlen(src));
 }
