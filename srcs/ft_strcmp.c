@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_substr.c                                      .::    .:/ .      .::   */
+/*   ft_strcmp.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/10 10:59:20 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/17 10:39:21 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/10/17 10:04:15 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/17 10:06:42 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned int	i;
-	char			*ptr;
+	int i;
+	int c;
 
 	i = 0;
-	if (!(ptr = malloc(len + 1)))
-		return (NULL);
-	*ptr = 0;
-	if (!(start > ft_strlen(s)))
-		while (i != len && s[start])
-			ptr[i++] = s[start++];
-	ptr[i] = '\0';
-	return (ptr);
+	c = 0;
+	while (s1[i] != '\0' && s1[i] == s2[i])
+		i++;
+	c = (unsigned char)s1[i] - (unsigned char)s2[i];
+	return (c);
 }

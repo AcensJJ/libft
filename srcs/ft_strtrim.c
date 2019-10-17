@@ -6,52 +6,69 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:00:05 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/15 12:45:51 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/17 12:37:09 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count_trim(char const *s1, char const *set)
+static int		ft_is_set(char const *s1, char const *set, size_t i)
 {
-	unsigned int	count;
-	long long		i;
-	long long		j;
+	size_t	j;
 
-	i = -1;
-	count = 0;
-	while (s1[++i])
-	{
-		j = 0;
-		while (set[j] && set[j] != s1[i])
-			j++;
-		if (s1[i] != set[j])
-			count++;
-	}
-	return (count);
+	j = 0;
+	while (set[j] && set[j] != s1[i])
+		j++;
+	if (s1[i] == set[j])
+		return (1);
+	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+static size_t	ft_start(char const *s1, char const *set)
 {
-	long long		i;
-	long long		j;
-	long long		k;
-	char			*ptr;
+	size_t	i;
 
-	if (!(ptr = malloc(ft_count_trim(s1, set) + 1)))
-		return (NULL);
-	*ptr = 0;
-	i = -1;
-	k = -1;
-	while (s1[++i])
+	i = 0;
+	while (s1[i] && ft_is_set(s1, set, i) == 1)
+		i++;
+	return (i);
+}
+
+static size_t	ft_end(char const *s1, char const *set)
+{
+	size_t	i;
+
+	i = ft_strlen(s1);
+	while (i != 0 && ft_is_set(s1, set, i) == 1)
+		i--;
+	i++;
+	return (i);
+}
+
+char			*ft_strtrim(char const *s1, char const *set)
+{
+	size_t		i;
+	char		*ptr;
+
+	i = 0;
+	if (ft_start(s1, set) < ft_end(s1, set))
 	{
-		j = 0;
-		while (set[j] && set[j] != s1[i])
-			j++;
-		if (s1[i] != set[j])
-			ptr[++k] = s1[i];
+		if (!(ptr = malloc(ft_end(s1, set) - ft_start(s1, set) + 1)))
+			return (NULL);
+		*ptr = 0;
+		while (i + ft_start(s1, set) != ft_end(s1, set))
+		{
+			ptr[i] = s1[i + ft_start(s1, set)];
+			i++;
+		}
 	}
-	ptr[++k] = 0;
+	else
+	{
+		if (!(ptr = malloc(1)))
+			return (NULL);
+		*ptr = 0;
+	}
+	ptr[i] = 0;
 	return (ptr);
 }
