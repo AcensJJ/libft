@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 11:14:46 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/18 13:07:31 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 15:46:57 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

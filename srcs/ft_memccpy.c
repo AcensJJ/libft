@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 13:45:12 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/18 13:06:59 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 15:46:39 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

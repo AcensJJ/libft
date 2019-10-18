@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/14 11:50:24 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/18 14:47:54 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 15:48:43 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(void *), void (*del)(void *))
 {

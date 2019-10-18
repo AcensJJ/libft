@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 16:16:12 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/15 11:26:32 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 15:46:36 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static void		ft_config_ptr(long long nb, long long i, long long j, char *ptr)
 {

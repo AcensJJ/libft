@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 15:35:09 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/14 14:52:43 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 15:47:20 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static int		ft_is_charset(char const *str, char c)
 {

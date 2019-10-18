@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 15:48:23 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/15 17:19:28 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 15:45:50 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int		ft_atoi(const char *str)
 {

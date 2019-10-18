@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 11:30:13 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/18 14:26:13 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 15:47:17 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

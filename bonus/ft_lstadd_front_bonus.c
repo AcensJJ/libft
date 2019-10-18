@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 13:49:38 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/14 11:54:14 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 15:48:27 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {

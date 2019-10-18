@@ -1,8 +1,21 @@
+# **************************************************************************** #
+#                                                           LE - /             #
+#                                                               /              #
+#    makefile                                         .::    .:/ .      .::    #
+#                                                  +:+:+   +:    +:  +:+:+     #
+#    By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+      #
+#                                                  #+#   #+    #+    #+#       #
+#    Created: 2019/10/18 15:41:28 by jacens       #+#   ##    ##    #+#        #
+#    Updated: 2019/10/18 15:43:39 by jacens      ###    #+. /#+    ###.fr      #
+#                                                          /                   #
+#                                                         /                    #
+# **************************************************************************** #
+
 NAME    =   libft.a
 
 CC      =   gcc 
 CFLAGS  =   -Wall -Wextra -Werror
-HEADER =    includes/libft.h
+HEADER =    libft.h
 LFLAGS  =   -I $(HEADER)
 
 SRCS = srcs/ft_atoi.c\
@@ -40,9 +53,9 @@ SRCS = srcs/ft_atoi.c\
 		srcs/ft_substr.c\
 		srcs/ft_tolower.c\
 		srcs/ft_toupper.c\
-		srcs/ft_strstr.c
+		srcs/ft_strstr.c\
 
-BNS = bonus/ft_lstadd_back_bonus.c\
+BONUS = bonus/ft_lstadd_back_bonus.c\
 		bonus/ft_lstadd_front_bonus.c\
 		bonus/ft_lstclear_bonus.c\
 		bonus/ft_lstdelone_bonus.c\
@@ -50,30 +63,29 @@ BNS = bonus/ft_lstadd_back_bonus.c\
 		bonus/ft_lstlast_bonus.c\
 		bonus/ft_lstmap_bonus.c\
 		bonus/ft_lstnew_bonus.c\
-		bonus/ft_lstsize_bonus.c
+		bonus/ft_lstsize_bonus.c\
 
 OBJ     =   $(SRCS:.c=.o)
-
 OBJS    =   $(SRCS:.c=.o) $(BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-    ar rc $(NAME) $(OBJ)
-    ranlib $(NAME)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 %.o : %.c $(HEADER)
-    $(CC) $(CFLAGS) $(LFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(LFLAGS) -c $< -o $@
 
 bonus: $(OBJS)
-    ar rc $(NAME) $(OBJS)
-    ranlib $(NAME)
+	ar rc $(NAME) $(OBJS)
+	ranlib $(NAME)
 
 clean:
-    rm -f $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-    rm -f $(NAME)
+	rm -f $(NAME)
 
 re : fclean all
 

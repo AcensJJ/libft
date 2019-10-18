@@ -6,12 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/15 17:10:02 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/15 17:19:16 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 15:48:03 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 char	*ft_strstr(const char *haystack, const char *to_find)
 {
