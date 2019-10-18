@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 11:25:04 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/18 12:00:29 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 13:07:20 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	dest = (char *)dst;
 	ptr = (char *)src;
-	if (dest == 0 || ptr == 0)
+	if (dest == 0 && ptr == 0)
 		return (0);
 	i = 0;
 	while (i != n)
