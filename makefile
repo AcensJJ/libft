@@ -1,6 +1,9 @@
-NAME = libft.a
+NAME    =   libft.a
 
-BONUS = libft.a
+CC      =   gcc 
+CFLAGS  =   -Wall -Wextra -Werror
+HEADER =    includes/libft.h
+LFLAGS  =   -I $(HEADER)
 
 SRCS = srcs/ft_atoi.c\
 		srcs/ft_bzero.c\
@@ -49,36 +52,28 @@ BNS = bonus/ft_lstadd_back_bonus.c\
 		bonus/ft_lstnew_bonus.c\
 		bonus/ft_lstsize_bonus.c
 
-INCLUDES = includes
+OBJ     =   $(SRCS:.c=.o)
 
-OBJS = ${SRCS:.c=.o}
+OBJS    =   $(SRCS:.c=.o) $(BONUS:.c=.o)
 
-OBJSBNS = ${BNS:.c=.o}
+all: $(NAME)
 
-CC = gcc
+$(NAME): $(OBJ)
+    ar rc $(NAME) $(OBJ)
+    ranlib $(NAME)
 
-RM = rm -f
+%.o : %.c $(HEADER)
+    $(CC) $(CFLAGS) $(LFLAGS) -c $< -o $@
 
-CFLAGS = -Wall -Wextra -Werror
+bonus: $(OBJS)
+    ar rc $(NAME) $(OBJS)
+    ranlib $(NAME)
 
-%.o : %.c
-		${CC} ${CFLAGS} -I ${INCLUDES} -c $< -o $@
+clean:
+    rm -f $(OBJS)
 
-$(NAME) : ${OBJS}
-		ar rcs $@ $^
-
-${BONUS} : ${OBJS} ${OBJSBNS}
-		ar rcs $@ $^
-
-all : $(NAME)
-
-bonus : ${BONUS}
-
-clean :
-		${RM} ${OBJS} ${OBJSBNS}
-
-fclean : clean
-		${RM} ${NAME}
+fclean: clean
+    rm -f $(NAME)
 
 re : fclean all
 
