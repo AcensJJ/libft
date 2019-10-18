@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 11:30:13 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/18 12:01:31 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 14:26:13 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,6 +18,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int i;
 
 	i = -1;
-	while (s[++i])
-		ft_putchar_fd(s[i], fd);
+	if (s != 0)
+		while (s[++i])
+			ft_putchar_fd(s[i], fd);
 }

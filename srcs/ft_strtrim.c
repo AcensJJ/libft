@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:00:05 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/18 11:55:51 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 14:43:03 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -52,7 +52,7 @@ char			*ft_strtrim(char const *s1, char const *set)
 	char		*ptr;
 
 	i = 0;
-	if (s1 == 0)
+	if (s1 == 0 || set == 0)
 		return (0);
 	if (ft_start(s1, set) < ft_end(s1, set))
 	{

@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 16:21:36 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/14 14:51:53 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 13:15:38 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,6 +20,6 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!(ptr = malloc(size * count))
 	|| count == 0 || size == 0)
 		return (NULL);
-	ft_bzero(ptr, count);
+	ft_bzero(ptr, size * count);
 	return (ptr);
 }
