@@ -62,7 +62,7 @@ RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
 %.o : %.c
-		${CC} ${CFLAGS} -I ${INCLUDES} -c -MMD $< -o $@
+		${CC} ${CFLAGS} -I ${INCLUDES} -c $< -o $@
 
 $(NAME) : ${OBJS}
 		ar rcs $@ $^
@@ -75,7 +75,7 @@ all : $(NAME)
 bonus : ${BONUS}
 
 clean :
-		${RM} ${OBJS} ${OBJSBNS} ${SRCS:.c=.d}
+		${RM} ${OBJS} ${OBJSBNS}
 
 fclean : clean
 		${RM} ${NAME}
@@ -83,5 +83,3 @@ fclean : clean
 re : fclean all
 
 .PHONY : all clean fclean re bonus
-
-include ${SRCS:.c=.d}

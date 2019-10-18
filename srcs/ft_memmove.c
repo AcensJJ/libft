@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 14:28:22 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/15 13:57:04 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 12:00:49 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = (char *)dst;
 	s = (char *)src;
+	if (s == 0)
+		return (0);
 	i = 0;
 	if (d < s)
 		while (i != len)

@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 11:26:09 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/15 14:47:17 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 12:01:47 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,6 +19,8 @@ char	*ft_strchr(const char *s, int c)
 	char		*ptr;
 
 	ptr = (char *)s;
+	if (ptr == 0)
+		return (0);
 	i = -1;
 	if (c == 0)
 		return (ptr + ft_strlen(ptr));

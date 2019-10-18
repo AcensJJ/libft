@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 11:43:45 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/11 15:37:42 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 11:52:56 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,10 +15,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
-
-	i = -1;
-	while (s[++i])
-		ft_putchar_fd(s[i], fd);
+	if (s != 0)
+		ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

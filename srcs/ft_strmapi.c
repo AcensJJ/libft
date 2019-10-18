@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 17:13:45 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/16 16:47:45 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 11:47:58 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
+	if (s == 0)
+		return (0);
 	if (!(ptr = malloc(ft_strlen(s) + 1)))
 		return (NULL);
 	*ptr = 0;

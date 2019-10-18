@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 13:14:56 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/15 18:22:14 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/18 11:49:25 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-	if (!(ptr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
+	if (!(ptr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1))
+	|| s1 == 0 || s2 == 0)
 		return (NULL);
 	*ptr = 0;
 	i = 0;
