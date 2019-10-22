@@ -6,7 +6,7 @@
 #    By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/18 15:41:28 by jacens       #+#   ##    ##    #+#        #
-#    Updated: 2019/10/18 15:43:39 by jacens      ###    #+. /#+    ###.fr      #
+#    Updated: 2019/10/22 13:39:00 by jacens      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -18,52 +18,52 @@ CFLAGS  =   -Wall -Wextra -Werror
 HEADER =    libft.h
 LFLAGS  =   -I $(HEADER)
 
-SRCS = srcs/ft_atoi.c\
-		srcs/ft_bzero.c\
-		srcs/ft_calloc.c\
-		srcs/ft_isalnum.c\
-		srcs/ft_isalpha.c\
-		srcs/ft_isascii.c\
-		srcs/ft_isdigit.c\
-		srcs/ft_isprint.c\
-		srcs/ft_itoa.c\
-		srcs/ft_memccpy.c\
-		srcs/ft_memchr.c\
-		srcs/ft_memcmp.c\
-		srcs/ft_memcpy.c\
-		srcs/ft_memmove.c\
-		srcs/ft_memset.c\
-		srcs/ft_putchar_fd.c\
-		srcs/ft_putendl_fd.c\
-		srcs/ft_putnbr_fd.c\
-		srcs/ft_putstr_fd.c\
-		srcs/ft_split.c\
-		srcs/ft_strchr.c\
-		srcs/ft_strcpy.c\
-		srcs/ft_strdup.c\
-		srcs/ft_strjoin.c\
-		srcs/ft_strlcat.c\
-		srcs/ft_strlcpy.c\
-		srcs/ft_strlen.c\
-		srcs/ft_strmapi.c\
-		srcs/ft_strncmp.c\
-		srcs/ft_strnstr.c\
-		srcs/ft_strrchr.c\
-		srcs/ft_strtrim.c\
-		srcs/ft_substr.c\
-		srcs/ft_tolower.c\
-		srcs/ft_toupper.c\
-		srcs/ft_strstr.c\
+SRCS = ft_atoi.c\
+		ft_bzero.c\
+		ft_calloc.c\
+		ft_isalnum.c\
+		ft_isalpha.c\
+		ft_isascii.c\
+		ft_isdigit.c\
+		ft_isprint.c\
+		ft_itoa.c\
+		ft_memccpy.c\
+		ft_memchr.c\
+		ft_memcmp.c\
+		ft_memcpy.c\
+		ft_memmove.c\
+		ft_memset.c\
+		ft_putchar_fd.c\
+		ft_putendl_fd.c\
+		ft_putnbr_fd.c\
+		ft_putstr_fd.c\
+		ft_split.c\
+		ft_strchr.c\
+		ft_strcpy.c\
+		ft_strdup.c\
+		ft_strjoin.c\
+		ft_strlcat.c\
+		ft_strlcpy.c\
+		ft_strlen.c\
+		ft_strmapi.c\
+		ft_strncmp.c\
+		ft_strnstr.c\
+		ft_strrchr.c\
+		ft_strtrim.c\
+		ft_substr.c\
+		ft_tolower.c\
+		ft_toupper.c\
+		ft_strstr.c\
 
-BONUS = bonus/ft_lstadd_back_bonus.c\
-		bonus/ft_lstadd_front_bonus.c\
-		bonus/ft_lstclear_bonus.c\
-		bonus/ft_lstdelone_bonus.c\
-		bonus/ft_lstiter_bonus.c\
-		bonus/ft_lstlast_bonus.c\
-		bonus/ft_lstmap_bonus.c\
-		bonus/ft_lstnew_bonus.c\
-		bonus/ft_lstsize_bonus.c\
+BONUS = ft_lstadd_back_bonus.c\
+		ft_lstadd_front_bonus.c\
+		ft_lstclear_bonus.c\
+		ft_lstdelone_bonus.c\
+		ft_lstiter_bonus.c\
+		ft_lstlast_bonus.c\
+		ft_lstmap_bonus.c\
+		ft_lstnew_bonus.c\
+		ft_lstsize_bonus.c\
 
 OBJ     =   $(SRCS:.c=.o)
 OBJS    =   $(SRCS:.c=.o) $(BONUS:.c=.o)
