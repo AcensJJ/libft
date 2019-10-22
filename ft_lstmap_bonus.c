@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/14 11:50:24 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/22 19:36:57 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/22 19:51:07 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,7 +20,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*n_ele;
 
 	if (lst == NULL || f == NULL)
-		return ;
+		return (NULL);
 	beg_lst = lst;
 	if (!(n_beg_lst = malloc(ft_lstsize(lst))))
 		return (0);
@@ -28,10 +28,10 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		if (!(n_ele = ft_lstnew(f(beg_lst->content))))
 		{
-			ft_lstclear(n_beg_lst, del);
+			ft_lstclear(&n_beg_lst, del);
 			return (NULL);
 		}
-		ft_lstadd_back(n_beg_lst, n_ele);
+		ft_lstadd_back(&n_beg_lst, n_ele);
 		beg_lst = beg_lst->next;
 	}
 	return (n_beg_lst);

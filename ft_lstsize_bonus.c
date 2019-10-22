@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 16:18:35 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/22 19:10:13 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/22 19:50:31 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,7 @@ int		ft_lstsize(t_list *lst)
 	t_list	*beg_lst;
 
 	if (lst == NULL)
-		return ;
+		return (0);
 	beg_lst = lst;
 	size = 0;
 	while (beg_lst != NULL)

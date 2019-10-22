@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 10:59:20 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/22 17:15:08 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/22 19:53:15 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*ptr;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	if (len > ft_strlen(s))
 		len = ft_strlen(s);
 	if (start > ft_strlen(s))
