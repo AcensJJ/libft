@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 16:26:52 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/22 15:23:05 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/22 19:05:27 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,6 +17,16 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list *beg_lst;
 
-	beg_lst = ft_lstlast(*alst);
-	beg_lst->next = new;
+	if (alst == NULL || new == NULL)
+		return ;
+	if (*alst == NULL)
+	{
+		*alst = new;
+		new->next = NULL;
+	}
+	else
+	{
+		beg_lst = ft_lstlast(*alst);
+		beg_lst->next = new;
+	}
 }
