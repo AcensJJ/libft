@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:05:15 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/14 15:48:21 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 13:34:21 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -77,6 +77,7 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),\
 int					check_base(char *base);
 void				ft_putnbr_base(int nbr, char *base);
 int					ft_atoi_base(char *str, char *base);
+char				*ft_itoa_base(long n, int base);
 void				ft_putchar(char c);
 void				ft_putstr(char *str);
 

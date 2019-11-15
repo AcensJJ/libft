@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/11 06:29:53 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/11 06:40:06 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 13:33:46 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -56,7 +56,7 @@ static int		ft_count_itoa(long long n, int base)
 	return (count);
 }
 
-char	*ft_itoa_base(int n, int base)
+char	*ft_itoa_base(long n, int base)
 {
 	char			*ptr;
 	long long		nb;
