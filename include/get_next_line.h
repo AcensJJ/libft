@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/24 13:53:48 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/14 18:37:36 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 15:36:57 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,18 +24,18 @@
 # include <stdio.h>
 # define BUFFER_SIZE	4096
 
-typedef struct		s_list
+typedef struct			s_list_gnl
 {
-	int				fd;
-	char			*buffer;
-	char			*line;
-	struct s_list	*next;
-}					t_list;
+	int					fd;
+	char				*buffer;
+	char				*line;
+	struct s_list_gnl	*next;
+}						t_list_gnl;
 
-void				ft_del_list(t_list **lst, t_list *lst_fd);
-char				*ft_strdup(const char *src);
-size_t				ft_strlchr(const char *s, int chr);
-void				ft_strdel(t_list *lst_fd);
-char				*ft_strcat_line(char *dest, char *src);
-int					get_next_line(int fd, char **line);
+void					ft_del_list(t_list_gnl **lst, t_list_gnl *lst_fd);
+char					*ft_strdup(const char *src);
+size_t					ft_strlchr(const char *s, int chr);
+void					ft_strdel(t_list_gnl *lst_fd);
+char					*ft_strcat_line(char *dest, char *src);
+int						get_next_line(int fd, char **line);
 #endif
