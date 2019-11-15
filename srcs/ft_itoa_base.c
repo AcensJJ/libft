@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/11 06:29:53 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/15 13:33:46 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 15:17:32 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -36,26 +36,6 @@ static void		ft_config_ptr(long long nb, long long i, char *ptr, int base)
 	ptr[++j] = 0;
 }
 
-static int		ft_count_itoa(long long n, int base)
-{
-	long long	i;
-	long long	count;
-
-	count = 1;
-	i = base;
-	if (n < 0)
-	{
-		n *= -1;
-		count++;
-	}
-	while (n >= i)
-	{
-		i *= base;
-		count++;
-	}
-	return (count);
-}
-
 char	*ft_itoa_base(long n, int base)
 {
 	char			*ptr;
@@ -63,7 +43,7 @@ char	*ft_itoa_base(long n, int base)
 	long long		i;
 
 	nb = n;
-	if (!(ptr = malloc(ft_count_itoa(nb, base) + 1)))
+	if (!(ptr = malloc(ft_count_nbr_base(nb, base) + 1)))
 		return (NULL);
 	*ptr = 0;
 	i = base;

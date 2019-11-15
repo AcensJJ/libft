@@ -1,52 +1,34 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_itoa.c                                        .::    .:/ .      .::   */
+/*   ft_count_nbr_base.c                              .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/10 16:16:12 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/15 15:16:25 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/11/15 15:16:59 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/11/15 15:17:24 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		ft_config_ptr(long long nb, long long i, long long j, char *ptr)
+int		ft_count_itoa(long long n, int base)
 {
-	long long	reste;
+	long long	i;
+	long long	count;
 
-	if (nb < 0)
+	count = 1;
+	i = base;
+	if (n < 0)
 	{
-		nb *= -1;
-		ptr[++j] = '-';
+		n *= -1;
+		count++;
 	}
-	while (nb >= i)
-		i *= 10;
-	while (i >= 10)
+	while (n >= i)
 	{
-		i /= 10;
-		reste = nb % i;
-		ptr[++j] = ((nb - reste) / i) + 48;
-		nb = reste;
+		i *= base;
+		count++;
 	}
-	ptr[++j] = 0;
-}
-
-char			*ft_itoa(int n)
-{
-	char			*ptr;
-	long long		nb;
-	long long		i;
-	long long		j;
-
-	nb = n;
-	j = -1;
-	if (!(ptr = malloc(ft_count_nbr(nb) + 1)))
-		return (NULL);
-	*ptr = 0;
-	i = 10;
-	ft_config_ptr(nb, i, j, ptr);
-	return (ptr);
+	return (count);
 }

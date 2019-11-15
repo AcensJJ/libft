@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:05:15 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/15 13:34:21 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 15:18:08 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -80,5 +80,7 @@ int					ft_atoi_base(char *str, char *base);
 char				*ft_itoa_base(long n, int base);
 void				ft_putchar(char c);
 void				ft_putstr(char *str);
+int					ft_count_nbr(long long n);
+int					ft_count_itoa(long long n, int base);
 
 #endif
