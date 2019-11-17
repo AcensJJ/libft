@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:05:15 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/17 15:20:10 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/17 17:46:46 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -71,7 +71,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strstr(const char *haystack, const char *to_find);
 char				*ft_strnstr(const char *haystack, const char *needle,\
 					size_t len);
-char				*ft_itoa_base(long n, int base);
+char				*ft_itoa_base(long n, char *base);
 char				*ft_uitoa_base(void *n, char *base);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
@@ -80,6 +80,7 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
+char				*ft_create_base(int size);
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),\
