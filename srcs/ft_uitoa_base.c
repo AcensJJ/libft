@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_itoa_base.c                                   .::    .:/ .      .::   */
+/*   ft_uitoa_base.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/11 06:29:53 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/17 13:05:21 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/17 13:16:22 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		ft_config_ptr2(long long nb, long long i, char *ptr, char *base)
+static void		ft_config_ptr2(unsigned long long nb, long long i, char *ptr,
+								char *base)
 {
 	long long		reste;
 	long long		j;
@@ -38,13 +39,13 @@ static void		ft_config_ptr2(long long nb, long long i, char *ptr, char *base)
 	ptr[++j] = 0;
 }
 
-char			*ft_itoa_base(long n, char *base)
+char			*ft_uitoa_base(void *n, char *base)
 {
-	char			*ptr;
-	long long		nb;
-	long long		i;
+	char					*ptr;
+	unsigned long long		nb;
+	long long				i;
 
-	nb = n;
+	nb = *((unsigned long long *)n);
 	i = ft_strlen(base);
 	if (!(ptr = malloc(ft_count_nbr_base(nb, i) + 1)))
 		return (NULL);
