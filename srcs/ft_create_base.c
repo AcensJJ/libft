@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/17 17:25:16 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/17 17:25:30 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/18 12:01:15 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 
 char	*ft_create_base(int size)
 {
-	char 	*ptr;
+	char	*ptr;
 	int		i;
 
 	if (size > 16 || size < 0 || (ptr = malloc(size + 1)) == NULL)
