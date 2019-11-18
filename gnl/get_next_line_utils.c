@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/24 13:53:51 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/15 15:29:14 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/18 10:52:31 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -40,27 +40,6 @@ void		ft_del_list(t_list_gnl **lst, t_list_gnl *lst_fd)
 	beg_lst->buffer = NULL;
 	free(beg_lst);
 	beg_lst = NULL;
-}
-
-char		*ft_strdup(const char *src)
-{
-	char		*dest;
-	size_t		i;
-
-	i = 0;
-	while (src[i] != '\0')
-		i++;
-	if (!(dest = malloc(sizeof(char) * (i + 1))))
-		return (NULL);
-	*dest = 0;
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = 0;
-	return (dest);
 }
 
 size_t		ft_strlchr(const char *s, int chr)

@@ -6,7 +6,7 @@
 #    By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/18 15:41:28 by jacens       #+#   ##    ##    #+#        #
-#    Updated: 2019/11/18 10:21:01 by jacens      ###    #+. /#+    ###.fr      #
+#    Updated: 2019/11/18 10:50:58 by jacens      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -26,6 +26,7 @@ SRCS =  srcs/ft_atoi.c\
 		srcs/ft_isascii.c\
 		srcs/ft_isdigit.c\
 		srcs/ft_isprint.c\
+		srcs/ft_count_nbr.c\
 		srcs/ft_itoa.c\
 		srcs/ft_memccpy.c\
 		srcs/ft_memchr.c\
@@ -54,12 +55,13 @@ SRCS =  srcs/ft_atoi.c\
 		srcs/ft_tolower.c\
 		srcs/ft_toupper.c\
 		srcs/ft_strstr.c\
-		srcs/ft_count_nbr.c\
+		srcs/ft_count_nbr_base.c\
 		srcs/ft_itoa_base.c\
-		srcs/ft_strcat.c
+		srcs/ft_uitoa_base.c\
+		srcs/ft_strcat.c\
 
 GNL	  = gnl/get_next_line.c\
-		gnl/get_next_line_utils.c
+		gnl/get_next_line_utils.c\
 
 BONUS = bonus/ft_lstadd_back_bonus.c\
 		bonus/ft_lstadd_front_bonus.c\

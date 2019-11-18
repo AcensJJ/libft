@@ -6,12 +6,13 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/24 14:58:07 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/15 15:28:43 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/18 10:52:55 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include "libft.h"
 
 static int			ft_read_buffer(int fd, t_list_gnl **lst_fd)
 {

@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:05:15 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/18 10:25:36 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/18 10:49:02 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,6 +14,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
 # include <strings.h>
 # include <string.h>
 # include <stdlib.h>

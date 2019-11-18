@@ -6,27 +6,22 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/11 06:29:53 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/18 10:22:04 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/18 10:48:47 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		ft_config_ptr2(unsigned long long nb, long long i, char *ptr,
-								char *base)
+static void		ft_config_ptr2(unsigned long long nb, unsigned long long i,
+								char *ptr, char *base)
 {
-	long long		reste;
-	long long		j;
-	long long		len;
+	long long			reste;
+	long long			j;
+	unsigned long long	len;
 
 	j = -1;
 	len = i;
-	if (nb < 0)
-	{
-		nb *= -1;
-		ptr[++j] = '-';
-	}
 	while (nb >= i)
 		i *= len;
 	while (i >= len)
@@ -43,7 +38,7 @@ char			*ft_uitoa_base(void *n, char *base)
 {
 	char					*ptr;
 	unsigned long long		nb;
-	long long				i;
+	unsigned long long		i;
 
 	nb = *((unsigned long long *)n);
 	i = ft_strlen(base);
