@@ -6,7 +6,7 @@
 #    By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/18 15:41:28 by jacens       #+#   ##    ##    #+#        #
-#    Updated: 2019/11/14 18:37:47 by jacens      ###    #+. /#+    ###.fr      #
+#    Updated: 2019/11/18 10:21:01 by jacens      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -54,6 +54,9 @@ SRCS =  srcs/ft_atoi.c\
 		srcs/ft_tolower.c\
 		srcs/ft_toupper.c\
 		srcs/ft_strstr.c\
+		srcs/ft_count_nbr.c\
+		srcs/ft_itoa_base.c\
+		srcs/ft_strcat.c
 
 GNL	  = gnl/get_next_line.c\
 		gnl/get_next_line_utils.c

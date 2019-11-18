@@ -6,10 +6,12 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/08/05 16:21:19 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/17 15:20:03 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/18 10:26:46 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {

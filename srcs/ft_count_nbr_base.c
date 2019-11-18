@@ -6,20 +6,20 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/15 15:16:59 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/15 15:17:24 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/18 10:25:13 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count_itoa(long long n, int base)
+int		ft_count_nbr_base(long long n, int len)
 {
 	long long	i;
 	long long	count;
 
 	count = 1;
-	i = base;
+	i = len;
 	if (n < 0)
 	{
 		n *= -1;
@@ -27,7 +27,7 @@ int		ft_count_itoa(long long n, int base)
 	}
 	while (n >= i)
 	{
-		i *= base;
+		i *= len;
 		count++;
 	}
 	return (count);
