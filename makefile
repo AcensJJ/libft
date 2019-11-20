@@ -6,7 +6,7 @@
 #    By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/18 15:41:28 by jacens       #+#   ##    ##    #+#        #
-#    Updated: 2019/11/18 13:16:32 by jacens      ###    #+. /#+    ###.fr      #
+#    Updated: 2019/11/20 16:40:03 by jacens      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -38,6 +38,8 @@ SRCS =  srcs/ft_atoi.c\
 		srcs/ft_putchar_fd.c\
 		srcs/ft_putendl_fd.c\
 		srcs/ft_putnbr_fd.c\
+		srcs/ft_check_base.c\
+		srcs/ft_putnbr_base.c\
 		srcs/ft_putstr_fd.c\
 		srcs/ft_split.c\
 		srcs/ft_strchr.c\
