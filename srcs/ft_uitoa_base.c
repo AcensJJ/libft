@@ -6,44 +6,52 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/11 06:29:53 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/18 14:22:35 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/03 19:29:32 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		ft_config_ptr2(unsigned long long nb, unsigned long long i,
-								char *ptr, char *base)
+static void		ft_config_ptr2(unsigned long nb, char *ptr, char *base,
+								long count)
 {
-	long long			reste;
-	long long			j;
+	long				reste;
+	long				j;
 	unsigned long long	len;
+	long				c;
+	int					i;
 
-	j = -1;
+	i = ft_strlen(base);
+	c = count;
 	len = i;
-	while (nb >= i)
-		i *= len;
-	while (i >= len)
+	c == 1 ? len /= i : 0;
+	while (c-- - 1 > 1)
+		len *= i;
+	j = -1;
+	if (count == 0)
+		ptr[++j] = base[0];
+	while (count > 0)
 	{
-		i /= len;
-		reste = nb % i;
-		ptr[++j] = base[((nb - reste) / i)];
+		reste = nb % len;
+		ptr[++j] = base[((nb - reste) / len)];
+		len /= i;
 		nb = reste;
+		count--;
 	}
 	ptr[++j] = 0;
 }
 
-static int		ft_ucount_nbr_base(unsigned long long n, unsigned long long len)
+static int		ft_ucount_nbr_base(unsigned long n, unsigned long len)
 {
 	unsigned long long	i;
-	long long			count;
+	long				count;
 
-	count = 1;
-	i = len;
-	while (n >= i)
+	count = 0;
+	i = n;
+	while (i)
 	{
-		i *= len;
+		i /= len;
 		count++;
 	}
 	return (count);
@@ -51,15 +59,17 @@ static int		ft_ucount_nbr_base(unsigned long long n, unsigned long long len)
 
 char			*ft_uitoa_base(void *n, char *base)
 {
-	char					*ptr;
-	unsigned long long		nb;
-	unsigned long long		i;
+	char				*ptr;
+	unsigned long		nb;
+	unsigned long		i;
+	long				count;
 
-	nb = (unsigned long long)n;
+	nb = (unsigned long)n;
 	i = ft_strlen(base);
-	if (!(ptr = malloc(ft_ucount_nbr_base(nb, i) + 1)))
+	count = ft_ucount_nbr_base(nb, i);
+	if (!(ptr = malloc(count + 1)))
 		return (NULL);
 	*ptr = 0;
-	ft_config_ptr2(nb, i, ptr, base);
+	ft_config_ptr2(nb, ptr, base, count);
 	return (ptr);
 }
