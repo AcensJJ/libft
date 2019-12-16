@@ -6,14 +6,14 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/16 22:13:32 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/16 22:22:08 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/16 22:27:38 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count_char(char *str, char find)
+int		ft_strcount_char(char *str, char find)
 {
 	int nb;
 	int i;
