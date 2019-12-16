@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strjoin.c                                     .::    .:/ .      .::   */
+/*   ft_count_char.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/10 13:14:56 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/16 21:10:49 by jacens      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/12/16 22:13:32 by jacens       #+#   ##    ##    #+#       */
+/*   Updated: 2019/12/16 22:17:57 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int		ft_count_char(char *str, char find)
 {
-	char	*ptr;
-	int		i;
-	int		j;
+	int nb;
+	int i;
 
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
-	if (!(ptr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1))
-	|| s1 == 0 || s2 == 0)
-		return (NULL);
-	*ptr = 0;
-	i = 0;
-	j = 0;
-	while (s1[i])
-	{
-		ptr[i] = s1[i];
-		i++;
-	}
-	while (s2[j])
-	{
-		ptr[i + j] = s2[j];
-		j++;
-	}
-	ptr[i + j] = 0;
-	return (ptr);
+	nb = 0;
+	i = -1;
+	while (str[++i])
+		if (str[i] == find)
+			nb++;
+	return (nb);
 }

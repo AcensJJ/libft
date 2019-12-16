@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 14:05:15 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/20 16:39:55 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/16 22:17:11 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -88,5 +88,6 @@ t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),\
 					void (*del)(void *));
 char				*ft_uitoa(unsigned int n);
+int					ft_count_char(char *str, char find);
 
 #endif
