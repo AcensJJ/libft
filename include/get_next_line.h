@@ -6,7 +6,7 @@
 /*   By: jacens <jacens@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/24 13:53:48 by jacens       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/18 10:52:42 by jacens      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/16 21:32:07 by jacens      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -32,6 +32,7 @@ typedef struct			s_list_gnl
 	struct s_list_gnl	*next;
 }						t_list_gnl;
 
+int						get_next_line(int fd, char **line);
 void					ft_del_list(t_list_gnl **lst, t_list_gnl *lst_fd);
 char					*ft_strdup(const char *src);
 size_t					ft_strlchr(const char *s, int chr);
