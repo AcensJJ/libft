@@ -8,8 +8,6 @@ Ce premier projet en tant qu'étudiant de 42 va vous faire consolider vos acquis
 recoder un certain nombre de fonctions de la librairie C standard, ainsi que d'autres fonctions utilitaires 
 que vous réutiliserez tout au long de votre cursus.
 
-![image](https://user-images.githubusercontent.com/45235527/96756036-c3446a00-13d3-11eb-9075-fd5b220d63cf.png)
-
 
 # Regles
 
