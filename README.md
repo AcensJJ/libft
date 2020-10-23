@@ -101,11 +101,11 @@ La description des champs de la structure t_list est la suivante :
 
 Les fonctions suivantes vous permettront de manipuler vos listes aisément.
 - ft_lstnew
- -ft_lstadd_front
- - ft_lstsize
- - ft_lstlast
- - ft_lstadd_back
- - ft_lstdelone
- - ft_lstclear
- - ft_lstiter
- - ft_lstmap
+- ft_lstadd_front
+- ft_lstsize
+- ft_lstlast
+- ft_lstadd_back
+- ft_lstdelone
+- ft_lstclear
+- ft_lstiter
+- ft_lstmap
