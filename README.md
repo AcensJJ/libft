@@ -2,7 +2,7 @@
 
 ![Screenshot 2020-10-21_18-45-38-835](https://user-images.githubusercontent.com/45235527/96751780-e4a25780-13cd-11eb-9d06-aa687ff25143.png)
 
-Description
+<strong>Description</strong>
 
 Ce premier projet en tant qu'étudiant de 42 va vous faire consolider vos acquis de piscine. Vous allez 
 recoder un certain nombre de fonctions de la librairie C standard, ainsi que d'autres fonctions utilitaires 
