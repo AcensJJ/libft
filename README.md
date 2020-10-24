@@ -20,34 +20,34 @@ make (re, clean, fclean, bonus)
 
 Vous devez recoder les fonctions suivantes. Ces fonctions ne nécessitent aucune fonction externe :
 
-- memset
-- bzero
-- memcpy
-- memccpy
-- memmove
-- memchr
-- memcmp
-- strlen
-- isalpha
-- isdigit
-- isalnum
-- isascii
-- isprint
-- toupper
-- tolower
-- strchr
-- strrchr
-- strncmp
-- strlcpy
-- strlcat
-- strnstr
-- atoi
+- `memset`
+- `bzero`
+- `memcpy`
+- `memccpy`
+- `memmove`
+- `memchr`
+- `memcmp`
+- `strlen`
+- `isalpha`
+- `isdigit`
+- `isalnum`
+- `isascii`
+- `isprint`
+- `toupper`
+- `tolower`
+- `strchr`
+- `strrchr`
+- `strncmp`
+- `strlcpy`
+- `strlcat`
+- `strnstr`
+- `atoi`
 
 
 Vous devez également recoder ces fonctions, en faisant appel à la fonction “malloc” :
 
-- calloc
-- strdup
+- `calloc`
+- `strdup`
 
 
 # II.3 Part 2 - Fonctions supplémentaires
@@ -56,16 +56,16 @@ Dans cette seconde partie, vous devrez coder un certain nombre de fonctions abse
 de la libc ou présentes dans une forme différente. Certaines de ces fonctions peuvent
 avoir de l’intéret pour faciliter l’écriture des fonctions de la première partie.
 
-- ft_substr
-- ft_strjoin
-- ft_strtrim
-- ft_split
-- ft_itoa
-- ft_strmapi
-- ft_putchar_fd
-- ft_putstr_fd
-- ft_putendl_fd
-- ft_putnbr_fd
+- `ft_substr`
+- `ft_strjoin`
+- `ft_strtrim`
+- `ft_split`
+- `ft_itoa`
+- `ft_strmapi`
+- `ft_putchar_fd`
+- `ft_putstr_fd`
+- `ft_putendl_fd`
+- `ft_putnbr_fd`
 
 
 # Partie bonus
@@ -100,12 +100,12 @@ La description des champs de la structure t_list est la suivante :
 - `next` : L’adresse du maillon suivant de la liste ou NULL si le maillon est le dernier
 
 Les fonctions suivantes vous permettront de manipuler vos listes aisément.
-- ft_lstnew
-- ft_lstadd_front
-- ft_lstsize
-- ft_lstlast
-- ft_lstadd_back
-- ft_lstdelone
-- ft_lstclear
-- ft_lstiter
-- ft_lstmap
+- `ft_lstnew`
+- `ft_lstadd_front`
+- `ft_lstsize`
+- `ft_lstlast`
+- `ft_lstadd_back`
+- `ft_lstdelone`
+- `ft_lstclear`
+- `ft_lstiter`
+- `ft_lstmap`
