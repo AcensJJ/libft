@@ -11,7 +11,9 @@ que vous réutiliserez tout au long de votre cursus.
 
 # Regles
 
+```
 make (re, f, fclean)
+```
 
 
 # II.2 Part 1 - Fonctions de la libc
@@ -94,8 +96,8 @@ struct s_list *next;
 ```
 
 La description des champs de la structure t_list est la suivante :
-- content : La donnée contenue dans le maillon. Le void * permet de stocker une donnée de n’importe quel type.
-- next : L’adresse du maillon suivant de la liste ou NULL si le maillon est le dernier
+- `content` : La donnée contenue dans le maillon. Le void * permet de stocker une donnée de n’importe quel type.
+- `next` : L’adresse du maillon suivant de la liste ou NULL si le maillon est le dernier
 
 Les fonctions suivantes vous permettront de manipuler vos listes aisément.
 - ft_lstnew
