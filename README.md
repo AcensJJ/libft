@@ -12,7 +12,7 @@ que vous réutiliserez tout au long de votre cursus.
 # Regles
 
 ```
-make (re, f, fclean)
+make (re, clean, fclean, bonus)
 ```
 
 
