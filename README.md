@@ -8,6 +8,7 @@ Ce premier projet en tant qu'étudiant de 42 va vous faire consolider vos acquis
 recoder un certain nombre de fonctions de la librairie C standard, ainsi que d'autres fonctions utilitaires 
 que vous réutiliserez tout au long de votre cursus.
 
+![make-Libft](https://user-images.githubusercontent.com/45235527/104592712-eac36f80-566e-11eb-8713-aae03bff77c3.gif)
 
 # Regles
 
