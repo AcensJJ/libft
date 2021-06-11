@@ -2,8 +2,10 @@
 
 # libft
 
-<img alt="Note" src="https://user-images.githubusercontent.com/45235527/96751780-e4a25780-13cd-11eb-9d06-aa687ff25143.png" width="250" height="200" />
-
+<p align="center">
+  <img alt="Note" src="https://user-images.githubusercontent.com/45235527/96751780-e4a25780-13cd-11eb-9d06-aa687ff25143.png" width="250" height="200" />
+</p>
+  
 <strong>Description</strong>
 
 Ce premier projet en tant qu'étudiant de 42 va vous faire consolider vos acquis de piscine. Vous allez 
