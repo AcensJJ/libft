@@ -2,17 +2,17 @@
 
 # libft
 
-<p align="center">
-  <img alt="Note" src="https://user-images.githubusercontent.com/45235527/96751780-e4a25780-13cd-11eb-9d06-aa687ff25143.png" width="250" height="200" />
-</p>
+<img alt="Note" src="https://user-images.githubusercontent.com/45235527/96751780-e4a25780-13cd-11eb-9d06-aa687ff25143.png" width="250" height="200" />
   
-<strong>Description</strong>
+### <strong>Description</strong>
 
 Ce premier projet en tant qu'étudiant de 42 va vous faire consolider vos acquis de piscine. Vous allez 
 recoder un certain nombre de fonctions de la librairie C standard, ainsi que d'autres fonctions utilitaires 
 que vous réutiliserez tout au long de votre cursus.
 
-![make-Libft](https://user-images.githubusercontent.com/45235527/104592712-eac36f80-566e-11eb-8713-aae03bff77c3.gif)
+<p align="center">
+  <img alt="make" src="https://user-images.githubusercontent.com/45235527/104592712-eac36f80-566e-11eb-8713-aae03bff77c3.gif" />
+</p>
 
 # Regles
 
